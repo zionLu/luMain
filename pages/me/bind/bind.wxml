@@ -1,0 +1,38 @@
+<view class="wrapper">
+    <image class="logo" src="../../../assets/icon/logo.png"></image>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">学号</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input  bindinput="handleIdInput" class="weui-input" placeholder="请输入学号" type="number" maxlength="10"/>
+            </view>
+            <view class="weui-cell__ft" wx:if="{{warnVisible}}">
+                <icon type="warn" size="23" color="#E64340"></icon>
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">密码</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input  bindinput="handlePasswordInput" class="weui-input" placeholder="请输入密码" maxlength="20"/>
+            </view>
+        </view>
+        <!--验证码输入  -->
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">验证码</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input  bindinput="handleVerifyCodeInput" class="weui-input" placeholder="请输入验证码" maxlength="4"/>
+            </view>
+            <image class="verifyImg" src="{{verifyImgURL}}" bindtap="requestAnotherVerify"></image>
+        </view>
+    </view>
+    <!--验证码图  -->
+    
+    <button bindtap="handleBind" class="weui-btn" type="primary" style="background-color: #29BB73;">绑定</button>
+    <image src="../../../assets/icon/bg.png" class="library"></image>
+</view>

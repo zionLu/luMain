@@ -1,0 +1,53 @@
+.mask{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.2);
+    z-index: 9999;
+    position: fixed;
+}
+.spinner {
+    width: 90px;
+    height: 90px;
+    text-align: center;  
+    animation: rotate 2.0s infinite linear;
+    position: relative;
+    top: -150rpx;
+}
+ 
+.dot1, .dot2 {
+    width: 40%;
+    height: 40%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #29BB73;
+    border-radius: 100%;
+    animation: bounce 2.0s infinite ease-in-out;
+}
+ 
+.dot2 {
+    top: auto;
+    bottom: 0px;
+    background-color: #F75C2F;
+    animation-delay: -1.0s;
+}
+
+@keyframes rotate { 
+    100% { 
+        transform: rotate(360deg); -webkit-transform: rotate(360deg) 
+    }
+}
+ 
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 
+  50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}

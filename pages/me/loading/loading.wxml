@@ -1,0 +1,8 @@
+<template name="loading">
+    <view class="mask">
+        <view class="spinner">
+            <view class="dot1"></view>
+            <view class="dot2"></view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,51 @@
+<import src="../../me/loading/loading" />
+<template is="{{loading}}"></template>
+<view class="wrapper">
+     <swiper  indicator-dots="true" indicator-active-color="#29BB73" autoplay="true" circular="true">
+        <swiper-item>
+            <image class="bg" src="http://image.yoricklee.com/WeGDUT/vtmer1.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <image class="bg" src="http://image.yoricklee.com/WeGDUT/vtmer2.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <image class="bg" src="http://image.yoricklee.com/WeGDUT/vtmer3.png"></image>
+        </swiper-item>
+    </swiper>
+    <view class="userWrapper">
+        <text class="userName">{{userInfo.nickName}}</text>   
+        <image class="userAvatar" src="{{userInfo.avatarUrl}}"></image>       
+    </view>
+    <view class="cards">
+        <template is="card" wx:for="{{cards}}" data="{{item}}" wx:key="{{item.key}}"></template>
+    </view>
+</view>
+<template name="card">
+    <view class="cardWrapper">
+        <view bindtap="handleCardEntry" hover-class="button-hover" data-uuid="{{item.uuid}}">
+            <view class="cardHead">
+                <image class="cardAvarat" src="{{item.avatarUrl}}"></image>
+                <view class="cardUserInfo">
+                    <view class="cardUserName">{{item.nickName}}</view>
+                    <view>{{item.time}}　　{{item.phone}}</view>
+                </view>
+                <icon type="cancel" data-uuid="{{item.uuid}}" catchtap="handlecardCancel" color="#888888"/>
+            </view>       
+            <view class="cardContent">
+                {{item.content}}
+            </view>
+            <image wx:if="{{item.imgUrl}}" catchtap="handlePreview" hover-class="none" class="cardImage" src="{{item.imgUrl}}" data-src="{{item.imgUrl}}"></image>
+        </view>     
+        <view class="handle">
+            <view class="handleComment" bindtap="handleCardEntry" data-uuid="{{item.uuid}}" hover-class="button-hover">
+                <image  class="handleIcon" src="../../../assets/icon/comment.png"></image>
+                {{item.commentCount}}
+            </view>
+            <view class="handlePraise" bindtap="handlePraise" data-uuid="{{item.uuid}}">
+                <image wx:if="{{item.praise == true}}" class="handleIcon" src="../../../assets/icon/praise.png" ></image>
+                <image wx:if="{{item.praise == false}}" class="handleIcon" src="../../../assets/icon/praiseS.png" ></image>
+                {{item.likeCount}} 
+            </view>
+        </view>
+    </view>
+</template>

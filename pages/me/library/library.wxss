@@ -1,0 +1,60 @@
+.weui-search-bar{
+    padding: 8rpx;
+}
+.weui-search-bar__cancel-btn{
+    margin-left: 8rpx;
+}
+.searchList{
+    width: 750rpx;
+    background: #FFFFFF;
+    font-size: 30rpx;
+    color: #353535;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left;
+}
+.searchItem{
+    padding: 10rpx 0 0 50rpx;
+}
+.bookList{
+    width: 700rpx;
+    height: 200rpx;
+    margin: 20rpx auto;
+    border: 1px solid #FAFAFA;
+    border-radius: 20rpx;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.bookLogo{   
+    width: 100rpx;
+    height: 100rpx;
+    margin: 0 20rpx 0 30rpx;
+}
+.bookInfo{
+    width: 500rpx;
+    font-size: 25rpx;
+    color: #888888;     
+}
+.title{
+    height: 45rpx;
+    line-height: 45rpx;
+    font-size: 35rpx;
+    color: #353535;
+    overflow: hidden; 
+}
+.author{
+    height: 30rpx;
+    line-height: 30rpx;
+    overflow: hidden; 
+}
+.weui-cell__ft_in-access::after{
+    width: 30rpx;
+    height: 30rpx;
+    border-color: #29BB73;
+    position: relative;
+    right: 10rpx;
+}

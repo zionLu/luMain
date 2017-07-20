@@ -1,0 +1,5 @@
+<!--tutorial.wxml-->
+    <view class="tutorial-wrap">
+      <image class="tutorial-content" mode="widthFix" src="http://image.yoricklee.com/WeGDUT/tutorial.jpg"></image>
+    </view>
+

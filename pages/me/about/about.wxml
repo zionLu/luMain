@@ -1,0 +1,28 @@
+<view class="wrapper">
+    <view class="logoWrapper">
+        <image class="logo" src="../../../assets/icon/logo.png"></image>
+        <image class="WeGDUT" src="../../../assets/icon/WeGDUT.png"></image>
+        <view class="version">V 1.0</view>
+    </view>
+    <swiper bindchange="handleSwiper" current="{{swiperCurrent}}" circular="false" indicator-dots="true" indicator-active-color="#29BB73" >
+        <swiper-item>
+            <view class="aboutOurWrapper">
+                <view class="title">关于我们</view>
+                <view class="aboutOur">
+                    <view>　　WeGDUT是由广东工业大学计算机学院维生数工作室开发的一款面向学生群体的微信小程序。</view>
+                    <view>　　WeGDUT秉承快捷方便的主旨。为了轻松使用、给用户带来更优秀的体验，我们精心筛选功能，主要有课程表，图书馆，校内新闻，成绩绩点查询，考试时间查询（等待新教务系统开放接口）以及工大墙。</view>
+                    <view>　　……</view>
+                    <view>　　……</view>
+                </view>　　
+            </view>
+        </swiper-item>
+        <swiper-item>
+        <textarea bindinput="handleFbInput" value="{{feedbackValue}}" placeholder="我们需要您的宝贵意见~" cursor-spacing="50"/>
+            <view class="aboutOurWrapper">
+                <view class="title">反馈</view>   
+                <button bindtap="handleSubmit" type="primary" style="background: #29BB73;">提交</button>        
+            </view>
+        </swiper-item>
+    </swiper>
+    
+</view>

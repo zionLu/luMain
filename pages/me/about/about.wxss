@@ -1,0 +1,79 @@
+.wrapper{
+    width: 100%;
+    height: 100%;   
+}
+.logoWrapper{
+    height: 480rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.logo{
+    width: 170rpx;
+    height: 170rpx;
+    animation: rotation 10s linear infinite;
+}
+
+@keyframes rotation{
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(180deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+.WeGDUT{
+    margin: 25rpx 0;
+    width: 210rpx;
+    height: 38rpx;
+}
+.version{
+    color: #888888;
+}
+swiper{
+    width: 730rpx;
+    height: 600rpx;
+    background: #FFFFFF;
+    border-radius: 20rpx;
+    margin: 0 auto;
+}
+.aboutWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title{
+    font-size: 35rpx;
+    line-height: 60rpx;
+    color: #29BB73;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #ECEDF1;
+}
+.aboutOur{
+    padding: 25rpx;
+    font-size: 30rpx;
+    color: #353535;
+    background:#fff;
+}
+textarea{
+    width: 650rpx; 
+    height: 250rpx;   
+    font-size: 35rpx;
+    border: 1px solid #ECEDF1;
+    padding: 25rpx;
+    position: absolute;
+    top: 75rpx;
+    left: 25rpx;
+}
+button{
+    width: 700rpx;
+    position: absolute;
+    top: 400rpx;
+    left: 15rpx;
+}

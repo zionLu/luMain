@@ -1,0 +1,30 @@
+<import src="../loading/loading" />
+<template is="{{loading}}"></template>
+<view class="wrapper">
+    <view class="tip">考前记得带齐证件及考试文具</view>
+    <view class="timeWrapper">
+        <template is="time" wx:for="{{time}}" data="{{item}}" wx:key="{{item.key}}"></template>
+    </view>
+</view>
+<template name="time">
+    <view class="time">
+        <view class="left">
+            <view class="subject grey" wx:if="{{item.count < 0}}">{{item.kcmc}}</view>
+            <view class="subject red" wx:elif="{{item.count <= 15}}">{{item.kcmc}}</view>
+            <view class="subject yellow" wx:elif="{{item.count <= 30}}">{{item.kcmc}}</view>
+            <view class="subject green" wx:else>{{item.kcmc}}</view>
+            <view class="date">
+                <image src="../../../assets/icon/testTime.png"></image>
+                <text>{{item.ksrq}}</text>
+            </view>
+            <view class="position">
+                <image src="../../../assets/icon/testPosition.png"></image>
+                <text>{{item.kscdmc}}</text>
+            </view>
+        </view>
+        <view class="right grey" wx:if="{{item.count < 0}}">{{item.count}}天</view>
+        <view class="right red" wx:elif="{{item.count <= 15}}">{{item.count}}天</view>
+        <view class="right yellow" wx:elif="{{item.count <= 30}}">{{item.count}}天</view>
+        <view class="right green" wx:else>{{item.count}}天</view>
+    </view>
+</template>

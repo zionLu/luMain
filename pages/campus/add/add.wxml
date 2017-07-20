@@ -1,0 +1,16 @@
+<import src="../../me/loading/loading" />
+<template is="{{loading}}"></template>
+<view class="wrapper">
+    <textarea placeholder="写点什么…" bindinput="handleContent"></textarea>
+    <view class="weui-uploader__file" bindtap="handlePreview">
+        <image class="weui-uploader__img" src="{{image}}" mode="aspectFill" />
+    </view>
+    <view class="weui-uploader__input-box" style="position: realtive; left: -88px;">
+        <view class="weui-uploader__input" bindtap="handleChooseImage"></view>
+    </view>
+    <view class="AnonWrapper">
+        <view>是否匿名</view>
+        <switch bindchange="handleAnon"/>
+    </view> 
+</view>
+<button type="primary" bindtap="handleSubmit" style="background-color: #29BB73;">贴卡片</button>

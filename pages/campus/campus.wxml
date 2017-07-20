@@ -1,0 +1,57 @@
+<import src="../me/loading/loading" />
+<view class="container"> 
+<template is="{{loading}}"></template>
+<scroll-view scroll-top="{{scrollTop}}"class="wrapper" scroll-y='ture' style="height:100%;" bindscrolltolower="loadMoer" bindscrolltoupper="refresh" bindtouchmove="touchmove" lower-threshold="50px">
+<view class="refresh" wx:for="{{refresh}}"><image class="img" src="../../../assets/icon/refresh.gif"></image></view>
+    <swiper  indicator-dots="true" indicator-active-color="#29BB73" autoplay="true" circular="true">
+        <swiper-item>
+            <image class="bg" src="http://image.yoricklee.com/WeGDUT/vtmer1.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <image class="bg" src="http://image.yoricklee.com/WeGDUT/vtmer2.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <image class="bg" src="http://image.yoricklee.com/WeGDUT/vtmer3.png"></image>
+        </swiper-item>
+    </swiper>
+    <view class="userWrapper">
+        <text class="userName">{{userInfo.nickName}}</text>   
+        <image class="userAvatar" bindtap="handleMe" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="card" >
+        <template is="card" wx:for="{{cards}}" data="{{item}}" wx:key="{{item.key}}"></template>
+    </view>
+    <movable-area>
+        <movable-view bindtap="handleAdd" direction="all" inertia="true" x="{{mov.x}}" y="{{mov.y}}">+</movable-view>
+    </movable-area>
+<view class="{{hideAfter}}" style="font-size:30px; text-align:center">     加载更多...</view>
+</scroll-view>
+</view>
+<template name="card">
+    <view class="cardWrapper"  >
+        <view bindtap="handleCardEntry" hover-class="button-hover" data-uuid="{{item.uuid}}">
+            <view class="cardHead">
+                <image class="cardAvatar" src="{{item.avatarUrl}}"></image>
+                <view class="cardUserInfo">
+                    <view class="cardUserName">{{item.nickName}}</view>
+                    <view>{{item.time}}　　{{item.phone}}</view>
+                </view>
+            </view>       
+            <view class="cardContent">
+                {{item.content}}
+            </view>
+            <image wx:if="{{item.imgUrl}}" catchtap="handlePreview" hover-class="none" class="cardImage" src="{{item.imgUrl}}" data-src="{{item.imgUrl}}"></image>
+        </view>     
+        <view class="handleWrapper">
+            <view class="handleComment" data-uuid="{{item.uuid}}" bindtap="handleCardEntry" hover-class="button-hover">
+                <image  class="handleIcon" src="../../assets/icon/comment.png"></image>
+                {{item.commentCount}}
+            </view>
+            <view class="handlePraise" bindtap="handlePraise" data-uuid="{{item.uuid}}">
+                <image wx:if="{{item.praise == true}}" class="handleIcon" src="../../assets/icon/praise.png" ></image>
+                <image wx:if="{{item.praise == false}}" class="handleIcon" src="../../assets/icon/praiseS.png" ></image>
+                {{item.likeCount}} 
+            </view>
+        </view>
+    </view>
+</template>

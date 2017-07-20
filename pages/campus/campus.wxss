@@ -1,0 +1,153 @@
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.container{
+ height: 100%; 
+} 
+.refresh{ 
+
+display: flex; 
+width:100%; 
+background:#f0f0f0; 
+overflow:hidden; 
+}  
+.img{ 
+ margin:auto;
+ height: 100rpx; 
+ width: 100rpx; 
+} 
+.bg{
+    width: 750rpx;
+    height: 400rpx;
+}
+swiper{
+    width: 750rpx;
+    height: 400rpx;
+}
+.userWrapper{
+    width: 100%;
+    height: 150rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -120rpx;
+}
+.userAvatar{
+    width: 150rpx;
+    height: 150rpx;
+    position: absolute;
+    right: 20rpx;
+    margin-right: 10rpx;
+
+}
+.userName{
+    font-size: 40rpx;
+    /*line-height: 100rpx;*/
+    color: #29BB73;
+    font-weight: 600;
+    margin-right: 20rpx;
+    position: absolute;
+    right: 190rpx;
+    text-align: right;
+    top: 0rpx;
+}
+.userId{
+    font-size: 26rpx;
+    line-height: 40rpx;
+}
+.cards{
+    position: relative;
+    top: -95rpx;
+}
+.cardWrapper{
+    width: 730rpx;
+    margin: 0 auto 20rpx;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 20rpx;
+    font-size: 25rpx;
+}
+.cardHead{
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+}
+.cardAvatar{
+    width: 60rpx;
+    height: 60rpx;
+    margin: 20rpx 0 0 30rpx;
+}
+.cardUserInfo{
+    margin: 20rpx;
+    font-size: 20rpx;
+    color: #888888;
+}
+.cardUserName{
+    font-size: 25rpx;   
+    color: #353535;
+}
+.cardContent{
+    margin: 0 30rpx 20rpx;
+}
+.cardImage{
+    width: 200rpx;
+    height: 200rpx;
+    margin: 0 30rpx 20rpx;
+}
+.handleWrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1rpx solid #F1F1F1;
+    color: #888888;
+}
+.handleIcon{
+    width: 30rpx;
+    height: 30rpx;
+    margin: 20rpx;
+}
+.handleComment{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #F1F1F1;
+}
+.handlePraise{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+movable-area{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+movable-view{
+    width: 50px;
+    height: 50px;
+    background: #FF5353;
+    color: #FFFFFF;
+    font-size: 35px;
+    font-weight: bold;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 47px;
+    box-shadow: 3px 3px 3px rgba(144,144,144,0.7);
+    pointer-events: auto;
+}
+.hide{
+  display:none;
+}

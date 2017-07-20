@@ -1,0 +1,52 @@
+/* pages/me/bind/bind.wxss */
+page{
+    background: #FFFFFF;
+}
+.wrapper{
+    text-align: center;
+}
+.logo{
+    width: 170rpx;
+    height: 170rpx;
+    margin: 50rpx auto 0;
+    animation: rotation 10s linear infinite;
+}
+@keyframes rotation{
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(180deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+.weui-cells_after-title{
+    width: 650rpx;
+    margin: 50rpx 0 0 50rpx;
+    font-size: 32rpx;
+}
+.weui-cell__bd{
+    text-align: left;
+}
+.weui-btn{
+    width: 650rpx;
+    margin-top: 70rpx;
+    z-index: 999;
+}
+.library{
+    width: 700rpx;
+    height: 500rpx;
+    position: absolute;
+    left: 25rpx;
+    bottom: 30rpx;
+}
+
+/*新增（LU） 验证码相关*/
+.verifyImg{
+  height:2.58823529em;
+  min-height:2.58823529em;
+  line-height:2.58823529em;
+  width: 5em;
+}

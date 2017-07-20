@@ -1,0 +1,46 @@
+<import src="../loading/loading" />
+<template is="{{loading}}"></template>
+<view class="wrapper">
+    <view class="scorePoint-wrapper">
+        <text>平均绩点</text>
+        <text style="font-size: 100rpx;">{{scorePoint}}</text>
+        <picker bindchange="handleSelectTerm" value="{{termValue}}" range="{{term}}">
+            <button type="default">{{termValue}} ↓</button>
+        </picker>
+    </view>
+    <view class="pie-chart-wrapper">
+        <canvas class="pie-chart" canvas-id="pie-chart"></canvas>
+        <view class="describe-wrapper">
+            <view class="circle-wrapper">
+                <view class="circle color0"></view>
+                <view class="describe">0　- 60</view>
+            </view>
+            <view class="circle-wrapper">
+                <view class="circle color6"></view>
+                <view class="describe">60 - 70</view>
+            </view>
+            <view class="circle-wrapper">
+                <view class="circle color7"></view>
+                <view class="describe">70 - 80</view>
+            </view>
+            <view class="circle-wrapper">
+                <view class="circle color8"></view>
+                <view class="describe">80 - 90</view>
+            </view>
+            <view class="circle-wrapper">
+                <view class="circle color9"></view>
+                <view class="describe">90 - 100</view>
+            </view>
+             
+        </view>
+    </view>
+    <view class="subjects">
+        <template is="subject-score" wx:for="{{score_s}}" wx:key="{{item.key}}" data="{{item}}"></template>
+    </view>
+</view>
+<template name="subject-score">
+    <view class="subject-score">
+        <text class="subject">{{item.kcmc}}</text>
+        <text class="score">{{item.zcj}}</text>
+    </view>
+</template>

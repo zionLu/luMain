@@ -1,0 +1,12 @@
+<import src="../../loading/loading" />
+<template is="{{loading}}"></template>
+<view class="wrapper">
+    <view class="news">
+        <template is="news" wx:for="{{news}}" data="{{item}}" wx:key="{{item.key}}"></template>
+    </view>   
+</view>
+<template name="news">
+    <image class="image" wx:if="{{item.mark == 'image'}}" src="{{item.content}}"></image>
+    <view class="text" wx:elif="{{item.mark == 'text'}}" >{{item.content}}</view>
+    <view class="footer" wx:elif="{{item.mark == 'footer'}}" >{{item.content}}</view>
+</template>

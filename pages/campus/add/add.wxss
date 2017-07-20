@@ -1,0 +1,30 @@
+.wrapper{
+    width: 670rpx;
+    padding: 30rpx;
+    margin: 0 auto;
+    color: #353535;
+    font-size: 28rpx;
+    background: #FFFFFF;
+    border-radius: 20rpx;
+    position: relative;
+    top: 20rpx;
+}
+textarea{
+    width: 100%;
+    height: 200rpx; 
+}
+.AnonWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 20rpx 0 0;
+    padding: 15rpx;
+    clear: both;
+}
+switch{
+    margin-left: 20rpx;
+}
+button{
+    width: 700rpx;
+    margin: 80rpx auto;
+}

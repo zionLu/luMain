@@ -1,0 +1,99 @@
+.scorePoint-wrapper{
+    width: 750rpx;
+    height: 400rpx;
+    background: #29BB73;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFFFFF;
+    font-size: 25rpx;
+}
+button{
+    height: 50rpx;
+    font-size: 30rpx;
+    line-height: 50rpx;
+    background: rgba(255,255,255,0.2);
+    color: #FFFFFF;
+}
+.pie-chart-wrapper{
+    width: 730rpx;
+    height: 220px;
+    background: #FFFFFF;
+    border-radius: 20rpx;
+    margin: 15rpx auto;
+    color: #353535;
+    font-size: 30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.pie-chart{
+    width: 180px;
+    height: 180px;
+    margin: 20px;
+}
+.describe-wrapper{
+    width: 200rpx;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.circle-wrapper{
+    width: 100%;
+    height: 30rpx;
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.circle{
+    width: 25rpx;
+    height: 25rpx;
+    border-radius: 100%;
+    margin: 0 20rpx;
+}
+
+.color0{
+    background: #F75C2F;
+}
+.color6{
+    background: #A0D8EF;
+}
+.color7{
+    background: #EFCD9A;
+}
+.color8{
+    background: #38B48B;
+}
+.color9{
+    background: #84A2D4;
+}
+.subjects{
+    width: 730rpx;
+    background: #FFFFFF;
+    border-radius: 20rpx;
+    margin: 15rpx auto;
+    color: #353535;
+    font-size: 30rpx;
+}
+.subject-score{
+    margin: 10rpx 30rpx;   
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.subject{
+    flex: 5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.score{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

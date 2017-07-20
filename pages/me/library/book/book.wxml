@@ -1,0 +1,57 @@
+<import src="../../loading/loading" />
+<template is="{{loading}}"></template>
+<view class="wrapper">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="handleTabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <swiper current="{{current}}" bindchange="handleSwiper">
+                <swiper-item>
+                    <image class="image" src="{{image}}"></image>
+                    <view class="info">
+                        <view class="title">{{info[0]}}</view>
+                        <view class="author">作　者：{{info[1]}}</view>
+                        <view class="count">价　格：{{info[2]}}元</view>
+                        <view class="public">出版社：{{info[3]}}</view>
+                        <view class="isbn">I S B N：{{info[4]}}</view>
+                        
+                    </view>
+                </swiper-item>
+                <swiper-item class="weui-tab__content">
+                    <view class="intro">
+                        <view>{{intro}}</view>
+                    </view>
+                </swiper-item>
+                <swiper-item class="weui-tab__content">
+                    <scroll-view scroll-y="true" class="contents">
+                        <view wx:for="{{contents}}" wx:key="{{item.key}}">{{item}}</view>   
+                    </scroll-view>
+                </swiper-item>
+                <swiper-item class="weui-tab__content">
+                    <view class="site">
+                        <view class="library">
+                            <view wx:for="{{site}}" wx:key="{{item.key}}">{{item.Room}}</view>
+                        </view>
+                        <view class="coordinate">
+                            <view wx:for="{{site}}" wx:key="{{item.key}}">{{item.position}}</view>
+                        </view>
+                        <view class="status">
+                            <view wx:for="{{site}}" wx:key="{{item.key}}">{{item.Status}}</view>                           
+                        </view>
+                    </view>
+                </swiper-item>
+            </swiper>
+        </view>
+    </view>
+</view>
+<!--<swiper>
+    <swiper-item>
+        111
+    </swiper-item>
+</swiper>-->

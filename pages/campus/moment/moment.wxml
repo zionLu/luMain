@@ -1,0 +1,49 @@
+<import src="../../me/loading/loading" />
+<template is="{{loading}}"></template>
+<view class="wrapper">
+    <view class="cardWrapper">
+        <view>
+            <view class="cardHead">
+                <image class="cardAvarat" src="{{card.avatarUrl}}"></image>
+                <view class="cardUserInfo">
+                    <view class="cardUserName">{{card.nickName}}</view>
+                    <view>{{card.time}}　　{{card.phone}}</view>
+                </view>
+            </view>       
+            <view class="cardContent">
+                {{card.content}}
+            </view>
+            <image wx:if="{{card.imgUrl}}" catchtap="handlePreview" class="cardImage" src="{{card.imgUrl}}"></image>
+        </view>
+        <view class="handle">
+            <view class="handleComment" bindtap="handleComment" hover-class="button-hover">
+                <image class="handleIcon" src="../../../assets/icon/comment.png"></image>
+                {{card.commentCount}}
+            </view>
+            <view class="handlePraise" bindtap="handlePraise" data-uuid="{{card.uuid}}">
+                <image wx:if="{{card.praise == true}}" class="handleIcon" src="../../../assets/icon/praise.png" ></image>
+                <image wx:if="{{card.praise == false}}" class="handleIcon" src="../../../assets/icon/praiseS.png" ></image>
+                {{card.likeCount}}
+            </view>
+        </view>
+        <view class="comments">
+            <template wx:for="{{card.comments}}" is="comment" wx:key="{{item.key}}" data="{{item}}"></template>
+        </view>
+        <view class="commentWrapper">
+            <input type="text" value="{{commentValue}}" focus="{{commentInputFocus}}" bindinput="handleCommentInput" bindfocus="handleCommentFocus" bindblur="handleCommentBlur" bindconfirm="handleCommentConfirm" cursor-spacing="50" confirm-type="send"  placeholder="写评论…"/> 
+            <view wx:if="{{handle.AnonShow}}" bindtap="handleAnonShow" class="AnonWrapper">
+                <view>是否匿名</view>
+                <switch bindchange="handleAnon" checked="{{anonValue}}"/>
+            </view>      
+        </view>
+    </view>
+</view>
+<template name="comment">
+    <view class="comment">
+        <image class="commentAvarat" src="{{item.avatarUrl}}"></image>
+        <view class="commentInfo">
+            <view class="commentUserName">{{item.nickname}}</view>
+            <view class="commentContent">{{item.content}}</view>
+        </view>      
+    </view>
+</template>

@@ -1,0 +1,74 @@
+.tip{
+    width: 750rpx;
+    height: 35rpx;
+    background: orange;
+    font-size: 25rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 10000;
+}
+.timeWrapper{
+    width: 730rpx;
+    margin: 0 auto;
+    position: relative;
+    top: 35rpx;
+}
+.time{
+    background: #FFFFFF;
+    border-radius: 20rpx;
+    margin-bottom: 15rpx;
+    display: flex;
+    padding: 10rpx 20rpx;
+    position: relative;
+    top: 15rpx;
+}
+.left{
+    flex: 2;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
+.subject{
+    font-weight: 900;
+    font-size: 28rpx;
+}
+.date{
+    font-size: 25rpx;
+    color: #888888;
+}
+.position{
+    font-size: 25rpx;
+    color: #888888;
+}
+.left image{
+    width: 30rpx;
+    height: 30rpx;
+    margin: 0 10rpx 0 0;
+    position: relative;
+    top: 7rpx;
+}
+.right{
+    flex: 1;
+    font-size: 50rpx;
+    font-weight: bold;
+    color: red;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.red{
+    color: #FF0000;
+}
+.yellow{
+    color: #FFC000;
+}
+.green{
+    color: #09BB07;
+}
+.grey{
+    color: #888888;
+}

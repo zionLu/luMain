@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/course/course",
+    "pages/me/about/about",
+    "pages/me/newsList/newsList",
+    "pages/me/bind/bind",
+    "pages/campus/campus",
+    "pages/campus/add/add",
+    "pages/campus/me/me",
+    "pages/campus/moment/moment",
+    "pages/me/me",
+    "pages/me/score/score",
+    "pages/me/newsList/news/news",
+    "pages/me/library/library",
+    "pages/me/library/book/book",
+    "pages/me/loading/loading",
+    "pages/me/tutorial/tutorial"
+  ],
+  "window": {
+    "backgroundColor": "#ECEDF1",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#29BB73",
+    "navigationBarTitleText": "WeGDUT",
+    "navigationBarTextStyle": "#FFFFFF"
+  },
+  "tabBar": {
+    "color": "#353535",
+    "selectedColor": "#29BB73",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/course/course",
+        "text": "课程表",
+        "iconPath": "assets/icon/course.png",
+        "selectedIconPath": "assets/icon/courseS.png"
+      },
+      {
+        "pagePath": "pages/campus/campus",
+        "text": "工大墙",
+        "iconPath": "assets/icon/wall.png",
+        "selectedIconPath": "assets/icon/wallS.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "assets/icon/me.png",
+        "selectedIconPath": "assets/icon/meS.png"
+      }
+    ]
+  }
+}
